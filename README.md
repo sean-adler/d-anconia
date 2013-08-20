@@ -4,7 +4,7 @@ D'Anconia
 D'Anconia is my independent study project for Fall 2013. It is intended to be a web application with which one can build graph-based macroeconomic models of an equity's performance, and then use these models to predict the equity's value in specific scenarios.
 
 ### Example Workflow
-Max wants to make money trading ExxonMobil (XOM). He researches the oil industry and related industries significantly before he creates a causal model of the macroeconomic effects which influence the stock's price.
+Max wants to make money trading ExxonMobil (XOM). He researches the oil industry and related industries significantly before he creates a causal model of the macroeconomic effects which influence the stock's price. Armed with knowledge of short-selling and options trading, Max knows it doesn't matter whether XOM goes up or down; he only needs a confident estimate of its percentage gain/loss to make money.
 
 In D'Anconia's *Model Builder* tab, Max drags out each macroeconomic effect onto an empty directed graph template, connects the nodes and assigns edge weights according to his perceived model.
 
@@ -15,11 +15,13 @@ Then in the *Events* tab, Max can drag out various macroeconomic events, set the
   - Drag events in Events list to graph; they transform into nodes
   - Click and drag to create edges between nodes
   - Click edges to set edge weights
+  - There will probably be a more simplistic "Multiple regression" option as well, which would automatically generate a model from regressing all chosen events on the chosen stock's price
 
 ### Events tab
   - Three panes:  Chosen events, Events list, and Outcomes
   - Can include multiple models to show multiple price outcomes
   - Click an outcome -> links to corresponding model in *Model Builder* tab
+  - "Outcomes" are percentage gains/losses computed by generating all "leaf node" parameters of a model by sampling uniformly at random from past data, and pushing these values through the model
 
 ### My Models tab
   - A simple list of all the user's models
